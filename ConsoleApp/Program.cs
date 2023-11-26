@@ -19,4 +19,5 @@ var host = Host.CreateDefaultBuilder(args)
     })
     .Build();
 
-_ = new HiLoGame(host.Services.GetRequiredService<HiLoGameOptions>(), host.Services.GetRequiredService<IMessage>(), new HiLoGameInfo());
+var game = new HiLoGame(host.Services.GetRequiredService<HiLoGameOptions>(), host.Services.GetRequiredService<IMessage>(), new HiLoGameInfo());
+game.Start();
