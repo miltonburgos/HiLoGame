@@ -146,6 +146,7 @@ public class HiLoGame
             {
                 _message.WonGame($"{player.PlayerName}: you won the game after {round} rounds\nCheck the guess numbers for each round: {string.Join(",", player.GuessNumbers!)}");
                 gameFinished = true;
+                break;
             }
             else
             {
